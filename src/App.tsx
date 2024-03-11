@@ -33,7 +33,7 @@ function App(): JSX.Element {
             }
           />
           <Route
-            path="/Dastine-Jhay-Bernardo/about/"
+            path="/Dastine-Jhay-Bernardo/about"
             element={
               <NavFooterLayout>
                 <AboutPage />

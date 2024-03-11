@@ -11,11 +11,11 @@ export default function NavComponent() {
   const navItems = [
     {
       title: "Home",
-      url: "/",
+      url: "/Dastine-Jhay-Bernardo",
     },
     {
       title: "About",
-      url: "/about",
+      url: "/Dastine-Jhay-Bernardo/about",
     },
     {
       title: "Portfolio",
