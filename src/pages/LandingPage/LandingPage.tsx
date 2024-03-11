@@ -1,4 +1,3 @@
-import React from "react";
 import HeroSectionComponent from "../../components/LandingPageComponents/HeroSectionComponent";
 import LatestWorkSectionComponent from "../../components/LandingPageComponents/LatestWorkSectionComponent";
 
