@@ -2,7 +2,8 @@ import { easeInOut, motion } from "framer-motion";
 import OutlineButtonComponent from "../Buttons/OutlineButtonComponent";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
-const PDF_FILE_URL = "http://localhost:5173/CV-Dastine-Jhay-Bernardo.pdf";
+const PDF_FILE_URL =
+  "https://tine0814.github.io/Dastine-Jhay-Bernardo/CV-Dastine-Jhay-Bernardo.pdf";
 
 export default function HeroSectionComponent() {
   const downloadFileAtURL = (url: string) => {
