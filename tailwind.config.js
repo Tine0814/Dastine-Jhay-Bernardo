@@ -15,7 +15,7 @@ export default {
         "text-four": "#414040",
       },
       backgroundImage: {
-        "background-img": "url('background2.jpg')",
+        // "background-img": "url('background2.jpg')",
       },
       boxShadow: {
         "inner-top": "inset 0px 1px 0px rgba(0, 0, 0, 0.1)",

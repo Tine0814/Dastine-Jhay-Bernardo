@@ -1,6 +1,7 @@
 import { easeInOut, motion } from "framer-motion";
 import OutlineButtonComponent from "../Buttons/OutlineButtonComponent";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import background from "../../assets/img/background.jpg";
 
 const PDF_FILE_URL =
   "https://tine0814.github.io/Dastine-Jhay-Bernardo/CV-Dastine-Jhay-Bernardo.pdf";
@@ -30,7 +31,9 @@ export default function HeroSectionComponent() {
       id="home"
       className="relative h-[400px] md:h-[600px] w-full  flex justify-center items-center shadow-xl text-text-three"
     >
-      <div className="bg-background-img bg-center bg-cover h-full w-full absolute blur-[5px]"></div>
+      <div className="h-full w-full absolute blur-[5px]">
+        <img className="h-full w-full object-cover" src={background} alt="" />
+      </div>
       <div className="bg-color-two h-full w-full absolute opacity-[0.6]"></div>
       <div className="relative min-w-full 2xl:min-w-[1300px] flex flex-col justify-center items-center gap-5">
         <div className="flex flex-col justify-center items-center gap-0 sm:w-[400px] md:w-full ">
