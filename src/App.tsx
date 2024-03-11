@@ -40,7 +40,7 @@ function App(): JSX.Element {
               </NavFooterLayout>
             }
           />
-          <Route path="*" element={<div>hello</div>} />
+          {/* <Route path="*" element={<div>hello</div>} /> */}
         </Routes>
       </BrowserRouter>
       {/* )} */}
