@@ -25,7 +25,7 @@ function App(): JSX.Element {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/Dastine-Jhay-Bernardo/"
             element={
               <NavFooterLayout>
                 <LandingPage />
@@ -33,14 +33,14 @@ function App(): JSX.Element {
             }
           />
           <Route
-            path="/about"
+            path="/Dastine-Jhay-Bernardo/about/"
             element={
               <NavFooterLayout>
                 <AboutPage />
               </NavFooterLayout>
             }
           />
-          {/* <Route path="*" element={<div>hello</div>} /> */}
+          <Route path="*" element={<div>hello</div>} />
         </Routes>
       </BrowserRouter>
       {/* )} */}
