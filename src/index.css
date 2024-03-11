@@ -1,0 +1,122 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+* {
+  /* outline: 2px solid #d341cc; */
+}
+
+.radialgradient {
+  background-image: radial-gradient(#fee8ba, #ff9cb4, #ff9cb4);
+}
+
+.container-shadow {
+  box-shadow: -8px -8px 16px rgba(255, 255, 255, 0.5),
+    8px 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.section-shadow {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+.container-shadow:hover {
+  box-shadow: -8px -8px 16px rgba(0, 0, 0, 0.2), 8px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button-shadow {
+  box-shadow: inset 4px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.half-circle {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.remove-shadow {
+  box-shadow: inset 0px -6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.black-and-white-image {
+  filter: grayscale(50%);
+}
+
+.animate-drop {
+  animation-name: drop;
+  animation-duration: 2s;
+}
+.animate-up {
+  animation-name: up;
+  animation-duration: 2s;
+}
+
+@keyframes drop {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  59% {
+    top: -100px;
+    opacity: 0.08;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes up {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  59% {
+    top: -100px;
+    opacity: 0.08;
+  }
+  100% {
+    top: -200px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px); /* Initial position, adjust as needed */
+  }
+  to {
+    opacity: 0.3;
+    transform: translateX(0); /* Final position, adjust as needed */
+  }
+}
+
+.hover-show-icon:hover .opacity-0 {
+  opacity: 0.3;
+  animation: moveFromRight 0.5s ease-in-out; /* Adjust the animation duration and easing as needed */
+}
+
+.filter-enhance {
+  filter: contrast(120%) brightness(110%) saturate(120%) grayscale(40%);
+}
