@@ -25,7 +25,7 @@ function App(): JSX.Element {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/Dastine-Jhay-Bernardo/"
+            path="/Dastine-Jhay-Bernardo"
             element={
               <NavFooterLayout>
                 <LandingPage />

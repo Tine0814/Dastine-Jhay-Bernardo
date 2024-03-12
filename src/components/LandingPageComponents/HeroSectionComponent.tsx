@@ -26,7 +26,7 @@ export default function HeroSectionComponent() {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { duration: 0.8, ease: easeInOut, delay: 0.2 },
+        transition: { duration: 0.8, ease: easeInOut, delay: 1.2 },
       }}
       id="home"
       className="relative h-[400px] md:h-[600px] w-full  flex justify-center items-center shadow-xl text-text-three"
@@ -42,7 +42,7 @@ export default function HeroSectionComponent() {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 1, ease: easeInOut, delay: 2.5 },
             }}
             className="text-[15px] md:text-[20px]"
           >
@@ -53,7 +53,7 @@ export default function HeroSectionComponent() {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 1, ease: easeInOut, delay: 2.5 },
             }}
             className="text-[30px] md:text-[50px] lg:text-[60px] font-black text-text-two"
           >
@@ -64,7 +64,7 @@ export default function HeroSectionComponent() {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 1, ease: easeInOut, delay: 2.5 },
             }}
             className="text-[15px] md:text-[20px] text-center"
           >
@@ -78,7 +78,7 @@ export default function HeroSectionComponent() {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 1, ease: easeInOut, delay: 2.5 },
             }}
           >
             <OutlineButtonComponent
@@ -93,7 +93,7 @@ export default function HeroSectionComponent() {
             animate={{
               x: 0,
               opacity: 1,
-              transition: { duration: 1, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 1, ease: easeInOut, delay: 2.5 },
             }}
             className="flex gap-5"
           >

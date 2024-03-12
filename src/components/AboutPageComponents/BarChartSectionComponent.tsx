@@ -56,7 +56,7 @@ export default function BarChartSectionComponent() {
   return (
     <section
       id="home"
-      className="relative w-full md:h-[600px] flex justify-center items-end shadow-inner text-[#1e1a53] bg-color-one overflow-x-hidden"
+      className="relative w-full md:h-[600px] flex justify-center items-end shadow-inner bg-color-one overflow-x-hidden"
     >
       <motion.div
         initial={{ opacity: 0 }}

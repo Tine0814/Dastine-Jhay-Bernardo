@@ -52,7 +52,7 @@ export default function PieChartSectionComponent() {
   return (
     <section
       id="home"
-      className="w-full  flex justify-center shadow-inner text-[#1e1a53] bg-color-one overflow-x-hidden"
+      className="w-full  flex justify-center shadow-inner bg-color-one overflow-x-hidden"
     >
       <div className="min-w-full 2xl:min-w-[1300px] flex justify-center items-center p-10">
         <div className="flex flex-col justify-center items-center gap-10">
