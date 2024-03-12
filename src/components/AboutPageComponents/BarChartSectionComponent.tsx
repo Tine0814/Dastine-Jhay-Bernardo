@@ -56,27 +56,27 @@ export default function BarChartSectionComponent() {
   return (
     <section
       id="home"
-      className="relative w-full md:h-[600px] flex justify-center items-end shadow-inner bg-color-one overflow-x-hidden"
+      className="w-full md:h-[600px] flex justify-center items-end shadow-inner bg-color-one overflow-x-hidden"
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: { duration: 0.8, ease: easeInOut, delay: 0.4 },
-        }}
-      >
-        <img
-          className="absolute w-[400px] left-0 bottom-0"
-          src={hinata}
-          alt="naruto"
-        />
-        <img
-          className="absolute w-[330px] right-0 bottom-0"
-          src={naruto}
-          alt="naruto"
-        />
-      </motion.div>
-      <div className="min-w-full 2xl:min-w-[1300px] flex justify-center items-center">
+      <div className="relative min-w-full 2xl:min-w-[1300px] flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.8, ease: easeInOut, delay: 0.4 },
+          }}
+        >
+          <img
+            className="absolute w-[400px] -left-80 bottom-0"
+            src={hinata}
+            alt="naruto"
+          />
+          <img
+            className="absolute w-[330px] -right-80 bottom-0"
+            src={naruto}
+            alt="naruto"
+          />
+        </motion.div>
         <div className="w-full flex justify-center items-center flex-col gap-10">
           <motion.h1
             initial={{ opacity: 0 }}
