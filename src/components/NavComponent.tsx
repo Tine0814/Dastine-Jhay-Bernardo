@@ -84,6 +84,44 @@ export default function NavComponent() {
           <div className="hidden md:flex">
             <OutlineButtonComponent label="Say Hello" />
           </div>
+          {isOpen && (
+            <AnimatePresence>
+              <motion.div
+                className={`bg-gradient-to-r from-purple-500 to-pink-500 w-[200px] absolute z-20 right-5 rounded-xl top-20 p-5`}
+                initial={{ opacity: 0, y: "-50%" }}
+                animate={{ opacity: 1, y: "0%" }}
+                exit={{ opacity: 0, y: "-50%", transition: { duration: 1 } }}
+                transition={{ type: "spring", stiffness: 100, duration: 0.75 }}
+              >
+                <motion.ul
+                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  initial={{ opacity: 0, y: "-50%" }}
+                  animate={{ opacity: 1, y: "0%" }}
+                  exit={{ opacity: 0, y: "-50%", transition: { duration: 1 } }}
+                  transition={{ type: "spring", stiffness: 100, duration: 1 }}
+                >
+                  {navItems.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        to={item.url}
+                        className={`${
+                          item.title === activeNavItem
+                            ? "text-text-two font-bold"
+                            : ""
+                        } block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white`}
+                        onClick={() => {
+                          handleClick(item.title);
+                          setOpen(false);
+                        }}
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </motion.ul>
+              </motion.div>
+            </AnimatePresence>
+          )}
         </div>
       </motion.nav>
     </AnimatePresence>
