@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import NavFooterLayout from "./components/Layout/NavFooterLayout";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import UnderConstructionPage from "./pages/UnderConstructionPage/UnderConstructionPage";
+import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 // import { useEffect, useState } from "react";
 
 function App(): JSX.Element {
@@ -40,7 +42,15 @@ function App(): JSX.Element {
               </NavFooterLayout>
             }
           />
-          <Route path="*" element={<div>hello</div>} />
+          <Route
+            path="/Dastine-Jhay-Bernardo/portfolio"
+            element={
+              <NavFooterLayout>
+                <PortfolioPage />
+              </NavFooterLayout>
+            }
+          />
+          <Route path="*" element={<UnderConstructionPage />} />
         </Routes>
       </BrowserRouter>
       {/* )} */}

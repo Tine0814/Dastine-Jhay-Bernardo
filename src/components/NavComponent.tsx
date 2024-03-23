@@ -19,7 +19,7 @@ export default function NavComponent() {
     },
     {
       title: "Portfolio",
-      url: "/portfolio",
+      url: "/Dastine-Jhay-Bernardo/portfolio",
     },
   ];
 
