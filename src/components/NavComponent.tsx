@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Squash as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { SetStateAction, useEffect, useState } from "react";
@@ -7,6 +7,8 @@ import OutlineButtonComponent from "./Buttons/OutlineButtonComponent";
 export default function NavComponent() {
   const [isOpen, setOpen] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("");
+
+  const navigate = useNavigate();
 
   const navItems = [
     {
@@ -51,7 +53,7 @@ export default function NavComponent() {
         className="w-full flex justify-center items-center z-50 shadow-md bg-color-two"
       >
         <div className="flex justify-between py-4 px-10 min-w-full 2xl:min-w-[1300px] items-center">
-          <Link to="/">
+          <Link to="/Dastine-Jhay-Bernardo">
             <motion.div
               whileHover={{ scale: 1.2 }}
               className="p-5 rounded-full border-2 border-text-two text-text-two hover:bg-text-two hover:text-color-two ease-in-out duration-300 shadown-2xl "
@@ -82,12 +84,15 @@ export default function NavComponent() {
             <Hamburger toggled={isOpen} size={30} toggle={setOpen} />
           </div>
           <div className="hidden md:flex">
-            <OutlineButtonComponent label="Say Hello" />
+            <OutlineButtonComponent
+              label="Say Hello"
+              onClick={() => navigate("/Dastine-Jhay-Bernardo/contact")}
+            />
           </div>
           {isOpen && (
             <AnimatePresence>
               <motion.div
-                className={`bg-gradient-to-r from-purple-500 to-pink-500 w-[200px] absolute z-20 right-5 rounded-xl top-20 p-5`}
+                className={`bg-color-two w-[200px] absolute z-20 right-5 rounded-xl top-20 p-5`}
                 initial={{ opacity: 0, y: "-50%" }}
                 animate={{ opacity: 1, y: "0%" }}
                 exit={{ opacity: 0, y: "-50%", transition: { duration: 1 } }}
@@ -119,6 +124,13 @@ export default function NavComponent() {
                     </li>
                   ))}
                 </motion.ul>
+                <OutlineButtonComponent
+                  label="Say Hello"
+                  onClick={() => {
+                    navigate("/Dastine-Jhay-Bernardo/contact");
+                    setOpen(false);
+                  }}
+                />
               </motion.div>
             </AnimatePresence>
           )}

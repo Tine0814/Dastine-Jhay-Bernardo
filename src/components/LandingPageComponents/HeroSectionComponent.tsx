@@ -21,6 +21,21 @@ export default function HeroSectionComponent() {
     aTag.remove();
   };
 
+  const social = [
+    {
+      icon: <FaGithub className="text-[30px]" />,
+      url: "https://github.com/Tine0814",
+    },
+    {
+      icon: <FaLinkedin className="text-[30px]" />,
+      url: "https://www.linkedin.com/in/dastine-bernardo-148499254/",
+    },
+    {
+      icon: <FaFacebook className="text-[30px]" />,
+      url: "https://web.facebook.com/Dastinebernardo",
+    },
+  ];
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -97,15 +112,16 @@ export default function HeroSectionComponent() {
             }}
             className="flex gap-5"
           >
-            <motion.a whileHover={{ scale: 1.3 }} href="">
-              <FaGithub className="text-[30px] " />
-            </motion.a>
-            <motion.a whileHover={{ scale: 1.3 }} href="">
-              <FaLinkedin className="text-[30px]" />
-            </motion.a>
-            <motion.a whileHover={{ scale: 1.3 }} href="">
-              <FaFacebook className="text-[30px]" />
-            </motion.a>
+            {social.map((soc, index) => (
+              <motion.a
+                key={index}
+                whileHover={{ scale: 1.3 }}
+                href={soc.url}
+                target="_blank"
+              >
+                {soc.icon}
+              </motion.a>
+            ))}
           </motion.div>
         </div>
       </div>

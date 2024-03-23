@@ -4,6 +4,7 @@ import NavFooterLayout from "./components/Layout/NavFooterLayout";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import UnderConstructionPage from "./pages/UnderConstructionPage/UnderConstructionPage";
 import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 // import { useEffect, useState } from "react";
 
 function App(): JSX.Element {
@@ -47,6 +48,14 @@ function App(): JSX.Element {
             element={
               <NavFooterLayout>
                 <PortfolioPage />
+              </NavFooterLayout>
+            }
+          />
+          <Route
+            path="/Dastine-Jhay-Bernardo/contact"
+            element={
+              <NavFooterLayout>
+                <ContactPage />
               </NavFooterLayout>
             }
           />

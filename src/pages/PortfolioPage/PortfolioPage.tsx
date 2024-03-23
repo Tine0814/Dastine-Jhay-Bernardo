@@ -1,3 +1,15 @@
+import { useEffect } from "react";
+import PortfolioSectionComponent from "../../components/PortfolioPageComponents/PortfolioSectionComponent";
+import ProjectSectionComponent from "../../components/PortfolioPageComponents/ProjectSectionComponent";
+
 export default function PortfolioPage() {
-  return <div></div>;
+  useEffect(() => {
+    document.title = "Dastine | Portfolio";
+  }, []);
+  return (
+    <>
+      <PortfolioSectionComponent />
+      <ProjectSectionComponent />
+    </>
+  );
 }

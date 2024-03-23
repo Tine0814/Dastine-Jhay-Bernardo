@@ -26,11 +26,6 @@ export default function RandomFactsSectionComponent() {
             In the gym's embrace, I sculpt and train, A healthy body, my
             enduring gain. Lifting weights, pushing through the strain, In
             fitness' rhythm, I find my refrain.
-            <br />
-            <br />
-            For me, it's not just code and screen, But also the gym, where
-            muscles preen. A balance struck, a lifestyle blend, Where strength
-            and health, together transcend.
           </p>
         </div>
       </div>

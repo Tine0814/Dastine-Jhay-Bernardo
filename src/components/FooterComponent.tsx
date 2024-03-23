@@ -21,7 +21,7 @@ export default function FooterComponent() {
         opacity: 1,
         transition: { duration: 2, ease: easeInOut, delay: 1 },
       }}
-      className="relative w-full h-[80px] bg-color-four grid place-content-center text-text-one border-2"
+      className="relative w-full h-[80px] bg-color-four grid place-content-center text-text-one border-2 z-20"
     >
       <div className=" min-w-full 2xl:min-w-[1600px] z-10">
         <a href="">© {currentYear} Dastine Jhay Bernardo</a>

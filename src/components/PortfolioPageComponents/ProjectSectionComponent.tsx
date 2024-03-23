@@ -1,19 +1,25 @@
 import letQuiz from "../../assets/img/letQuiz.png";
 import toDo from "../../assets/img/toDo.png";
 import clinic from "../../assets/img/clinic_inventory.png";
+import dragonball from "../../assets/img/dragon.png";
+import portfolio from "../../assets/img/firstPortfolio.png";
 import lilo from "../../assets/img/LiloDashboard.png";
-// import minicat from "../../assets/img/minicat.png";
-// import minidog from "../../assets/img/minidog.png";
 import { easeInOut, motion } from "framer-motion";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-export default function LatestWorkSectionComponent() {
+export default function ProjectSectionComponent() {
   const myWork = [
     {
       image: lilo,
       title: "HR Management System",
       projectTitle: "20023 Branded Tech",
       url: "https://demo.lilohr.com/admin/dashboard",
+    },
+    {
+      image: portfolio,
+      title: "First Portfolio Website",
+      projectTitle: "Side Project",
+      url: "https://tine0814.github.io/my-portfolio/",
     },
     {
       image: letQuiz,
@@ -27,25 +33,33 @@ export default function LatestWorkSectionComponent() {
       projectTitle: "Side Project",
       url: "https://to-do-list-mern-stack-frontend.vercel.app/",
     },
+    {
+      image: dragonball,
+      title: "Dragon Ball Game Landing Page",
+      projectTitle: "Side Project",
+      url: "https://github.com/Tine0814/Dragon-ball-game-Landing-page",
+    },
+    {
+      image: clinic,
+      title: "Clinic Inventory System",
+      projectTitle: "Capstone Project",
+      url: "https://github.com/Tine0814/Clinic-Inventory-System",
+    },
   ];
   return (
-    <section className="flex justify-center p-0 md:p-10 shadow-2xl overflow-hidden bg-color-three">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { duration: 0.8, ease: easeInOut, delay: 1.5 },
-        }}
-        className="relative min-w-full 2xl:min-w-[1300px] p-20 flex flex-col items-center justify-center gap-10"
-      >
-        <div className="flex items-center gap-12">
-          <span className="md:w-[200px] xl:w-[340px] h-[2px] bg-color-five"></span>
-          <h1 className="font-semibold md:text-[15px] text-text-four xl:text-[20px] text-center">
-            SOME OF MY LATEST WORK
-          </h1>
-          <span className="md:w-[200px] xl:w-[340px]  h-[2px] bg-color-five"></span>
-        </div>
-        <div className="w-full  grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10 lg:place-content-center">
+    <section
+      id="home"
+      className="w-full flex justify-center shadow-inner bg-color-three overflow-x-hidden pb-20"
+    >
+      <div className="min-w-full 2xl:min-w-[1300px] flex justify-center items-center p-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 0.8, ease: easeInOut, delay: 1.5 },
+          }}
+          className="w-full  grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10"
+        >
           {myWork.map((work, index) => (
             <motion.div
               whileHover={{
@@ -53,9 +67,13 @@ export default function LatestWorkSectionComponent() {
                 transition: { duration: 0.6, ease: easeInOut },
               }}
               key={index}
-              className="w-full lg:w-[400px] bg-color-three rounded-md container-shadow p-3 hover-show-icon"
+              className="w-full lg:w-[400px] bg-color-three rounded-md container-shadow p-3 hover-show-icon cursor-pointer"
               onClick={() => {
-                if (work.url) {
+                if (!work.url) {
+                  {
+                    ("/");
+                  }
+                } else {
                   window.open(work.url, "_blank");
                 }
               }}
@@ -76,35 +94,8 @@ export default function LatestWorkSectionComponent() {
               </div>
             </motion.div>
           ))}
-        </div>
-        {/* <motion.div
-          className="absolute -bottom-20 md:-bottom-32 -right-1 md:-right-10"
-          animate={{
-            y: [-7, 0, -7],
-          }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
-          <img src={minicat} alt="" className="w-[250px]" />
         </motion.div>
-        <motion.div
-          className="absolute -bottom-5 -right-10 md:-bottom-16 md:-right-24"
-          animate={{
-            y: [-7, 0, -7],
-          }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        >
-          <img src={minidog} alt="" className="w-[150px]" />
-        </motion.div> */}
-      </motion.div>
+      </div>
     </section>
   );
 }
