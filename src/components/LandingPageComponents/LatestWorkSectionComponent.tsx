@@ -1,6 +1,5 @@
 import letQuiz from "../../assets/img/letQuiz.png";
 import toDo from "../../assets/img/toDo.png";
-import clinic from "../../assets/img/clinic_inventory.png";
 import lilo from "../../assets/img/LiloDashboard.png";
 // import minicat from "../../assets/img/minicat.png";
 // import minidog from "../../assets/img/minidog.png";
