@@ -24,7 +24,7 @@ export default function PortfolioSectionComponent() {
               x: 0,
               transition: { duration: 0.8, ease: easeInOut, delay: 1.8 },
             }}
-            className="md:w-[320px] xl:w-[500px]"
+            className="w-[320px] xl:w-[500px]"
           >
             <h1 className="text-[70px] xl:text-[80px] font-black text-text-four">
               Portfolio.
@@ -51,7 +51,7 @@ export default function PortfolioSectionComponent() {
               {
                 <Lottie
                   animationData={animation}
-                  className="w-[200px] sm:[400px] lg:w-[500px] 2xl:w-[600px]"
+                  className="w-[500px] 2xl:w-[600px]"
                 />
               }
             </figure>

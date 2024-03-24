@@ -2,6 +2,7 @@ import { easeInOut, motion } from "framer-motion";
 import mirror from "../../assets/img/mirrorPic.png";
 import programming from "../../assets/img/python.jpg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { MdAttachEmail } from "react-icons/md";
 
 export default function ContactInformationSectionComponent() {
   const social = [
@@ -29,7 +30,7 @@ export default function ContactInformationSectionComponent() {
       id="home"
       className="min-h-screen w-full  flex justify-center items-center bg-color-one overflow-x-hidden"
     >
-      <div className="min-w-full 2xl:min-w-[1300px] grid place-content-center border-b-2 gap-5 mt-0 lg:-mt-40">
+      <div className="min-w-full 2xl:min-w-[1300px] p-10 grid place-content-center border-b-2 gap-5 mt-0 lg:-mt-40">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -45,7 +46,7 @@ export default function ContactInformationSectionComponent() {
               x: 0,
               transition: { duration: 0.8, ease: easeInOut, delay: 1.8 },
             }}
-            className="md:w-[320px] xl:w-[500px]"
+            className="w-[320px] xl:w-[500px]"
           >
             <h1 className="text-[70px] xl:text-[80px] font-black text-text-four">
               Contact.
@@ -53,10 +54,11 @@ export default function ContactInformationSectionComponent() {
             <h2 className="text-[25px] text-text-one">
               Get in touch with me via social media or email.
             </h2>
-            <div className="mt-5 text-text-one text-[20px] font-bold">
-              <h1>Email: Djhaybernardo@gmail.com</h1>
+            <div className="mt-5 flex items-center gap-2 text-text-one text-[20px] font-bold">
+              <MdAttachEmail />
+              <h1>Djhaybernardo@gmail.com</h1>
             </div>
-            <div className="mt-5 flex gap-10">
+            <div className="mt-5 grid lg:grid-cols-3 grid-cols-2 gap-10">
               {social.map((soc, index) => (
                 <motion.a
                   whileHover={{ scale: 1.3 }}

@@ -6,7 +6,7 @@ export default function RandomFactsSectionComponent() {
       id="home"
       className="w-full  flex justify-center shadow-inner bg-color-three overflow-x-hidden"
     >
-      <div className="min-w-full 2xl:min-w-[1300px] flex justify-center items-center p-20">
+      <div className="min-w-full 2xl:min-w-[1300px] sm:flex-col-reverse flex justify-center items-center p-20">
         <div className="w-[500px]">
           <img src={luffy} alt="luffy" />
         </div>

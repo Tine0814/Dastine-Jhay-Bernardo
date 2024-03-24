@@ -1,5 +1,5 @@
-import letQuiz from "../../assets/img/letQuiz.png";
-import toDo from "../../assets/img/toDo.png";
+import ts from "../../assets/img/ts.png";
+import js from "../../assets/img/js-API2.png";
 import lilo from "../../assets/img/LiloDashboard.png";
 // import minicat from "../../assets/img/minicat.png";
 // import minidog from "../../assets/img/minidog.png";
@@ -11,20 +11,20 @@ export default function LatestWorkSectionComponent() {
     {
       image: lilo,
       title: "HR Management System",
-      projectTitle: "20023 Branded Tech",
+      projectTitle: "20023 Branded Tech (Fullstack)",
       url: "https://demo.lilohr.com/admin/dashboard",
     },
     {
-      image: letQuiz,
-      title: "Let Quiz Website",
-      projectTitle: "Side Project",
-      url: "https://let-quiz.vercel.app/",
+      image: ts,
+      title: "REST API Express.js + mysql + typescript",
+      projectTitle: "Side Project (Backend)",
+      url: "https://github.com/Tine0814/Crud-node-sql",
     },
     {
-      image: toDo,
-      title: "CRUD website featuring a refined design",
-      projectTitle: "Side Project",
-      url: "https://to-do-list-mern-stack-frontend.vercel.app/",
+      image: js,
+      title: "REST API Express.js + mysql",
+      projectTitle: "Side Project (Backend)",
+      url: "https://github.com/Tine0814/Crud-node-mysql",
     },
   ];
   return (
@@ -76,6 +76,12 @@ export default function LatestWorkSectionComponent() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          whileHover={{ scale: 1.3 }}
+          className="border-b-2 font-semibold md:text-[15px] text-text-four xl:text-[20px]"
+        >
+          <a href="/Dastine-Jhay-Bernardo/portfolio">See More</a>
+        </motion.div>
         {/* <motion.div
           className="absolute -bottom-20 md:-bottom-32 -right-1 md:-right-10"
           animate={{

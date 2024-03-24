@@ -53,7 +53,7 @@ export default function NavComponent() {
         className="w-full flex justify-center items-center z-50 shadow-md bg-color-two"
       >
         <div className="flex justify-between py-4 px-10 min-w-full 2xl:min-w-[1300px] items-center">
-          <Link to="/Dastine-Jhay-Bernardo">
+          <a href="/Dastine-Jhay-Bernardo">
             <motion.div
               whileHover={{ scale: 1.2 }}
               className="p-5 rounded-full border-2 border-text-two text-text-two hover:bg-text-two hover:text-color-two ease-in-out duration-300 shadown-2xl "
@@ -62,12 +62,12 @@ export default function NavComponent() {
                 D<span className="">B</span>
               </h1>
             </motion.div>
-          </Link>
+          </a>
           <ul className="text-text-three hidden gap-20 md:flex">
             {navItems.map((item, index) => (
               <li key={index}>
-                <Link
-                  to={item.url}
+                <a
+                  href={item.url}
                   className={`${
                     item.title === activeNavItem
                       ? "text-text-two font-bold"
@@ -76,7 +76,7 @@ export default function NavComponent() {
                   onClick={() => handleClick(item.title)}
                 >
                   {item.title}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

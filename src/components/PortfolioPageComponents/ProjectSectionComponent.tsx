@@ -4,6 +4,9 @@ import clinic from "../../assets/img/clinic_inventory.png";
 import dragonball from "../../assets/img/dragon.png";
 import portfolio from "../../assets/img/firstPortfolio.png";
 import lilo from "../../assets/img/LiloDashboard.png";
+import js from "../../assets/img/js-API2.png";
+import ts from "../../assets/img/ts.png";
+import car from "../../assets/img/car.png";
 import { easeInOut, motion } from "framer-motion";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
@@ -12,37 +15,55 @@ export default function ProjectSectionComponent() {
     {
       image: lilo,
       title: "HR Management System",
-      projectTitle: "20023 Branded Tech",
+      projectTitle: "20023 Branded Tech (Fullstack)",
       url: "https://demo.lilohr.com/admin/dashboard",
     },
     {
-      image: portfolio,
-      title: "First Portfolio Website",
-      projectTitle: "Side Project",
-      url: "https://tine0814.github.io/my-portfolio/",
+      image: ts,
+      title: "REST API Express.js + mysql + typescript",
+      projectTitle: "Side Project (Backend)",
+      url: "https://github.com/Tine0814/Crud-node-sql",
+    },
+    {
+      image: js,
+      title: "REST API Express.js + mysql",
+      projectTitle: "Side Project (Backend)",
+      url: "https://github.com/Tine0814/Crud-node-mysql",
     },
     {
       image: letQuiz,
       title: "Let Quiz Website",
-      projectTitle: "Side Project",
+      projectTitle: "Side Project (Frontend)",
       url: "https://let-quiz.vercel.app/",
     },
     {
       image: toDo,
       title: "CRUD website featuring a refined design",
-      projectTitle: "Side Project",
+      projectTitle: "Side Project (Fullstack)",
       url: "https://to-do-list-mern-stack-frontend.vercel.app/",
+    },
+    {
+      image: car,
+      title: "Car Rent Landing Page",
+      projectTitle: "Side Project (Frontend)",
+      url: "https://github.com/Tine0814/Car-Rent",
+    },
+    {
+      image: portfolio,
+      title: "First Portfolio Website",
+      projectTitle: "Side Project (Frontend)",
+      url: "https://tine0814.github.io/my-portfolio/",
     },
     {
       image: dragonball,
       title: "Dragon Ball Game Landing Page",
-      projectTitle: "Side Project",
+      projectTitle: "Side Project (Frontend)",
       url: "https://github.com/Tine0814/Dragon-ball-game-Landing-page",
     },
     {
       image: clinic,
       title: "Clinic Inventory System",
-      projectTitle: "Capstone Project",
+      projectTitle: "Capstone Project (Fullstack)",
       url: "https://github.com/Tine0814/Clinic-Inventory-System",
     },
   ];
