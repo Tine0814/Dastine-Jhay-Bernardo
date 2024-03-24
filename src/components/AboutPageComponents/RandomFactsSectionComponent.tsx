@@ -6,11 +6,11 @@ export default function RandomFactsSectionComponent() {
       id="home"
       className="w-full  flex justify-center shadow-inner bg-color-three overflow-x-hidden"
     >
-      <div className="min-w-full 2xl:min-w-[1300px] sm:flex-col-reverse flex justify-center items-center p-20">
-        <div className="w-[500px]">
+      <div className="min-w-full 2xl:min-w-[1300px] flex-col-reverse md:flex-row flex justify-center items-center p-20">
+        <div className="w-full md:w-[500px]">
           <img src={luffy} alt="luffy" />
         </div>
-        <div className="w-[500px]">
+        <div className="w-full md:w-[500px]">
           <h1 className="text-[25px] font-bold text-text-one">Random Facts</h1>
           <p className="text-justify mt-5 text-[20px] text-text-one">
             In the realm of code, I wield my might, Sipping protein, powering

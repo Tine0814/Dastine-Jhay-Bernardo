@@ -56,7 +56,7 @@ export default function BarChartSectionComponent() {
   return (
     <section
       id="home"
-      className="w-full hidden md:h-[600px] md:flex justify-center items-end shadow-inner bg-color-one overflow-x-hidden"
+      className="w-full hidden md:h-[600px] xl:flex justify-center items-end shadow-inner bg-color-one overflow-x-hidden"
     >
       <div className="relative min-w-full 2xl:min-w-[1300px] flex justify-center items-center">
         <motion.div
