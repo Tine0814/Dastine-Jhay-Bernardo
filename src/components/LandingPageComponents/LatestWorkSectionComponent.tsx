@@ -5,6 +5,7 @@ import lilo from "../../assets/img/LiloDashboard.png";
 // import minidog from "../../assets/img/minidog.png";
 import { easeInOut, motion } from "framer-motion";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function LatestWorkSectionComponent() {
   const myWork = [
@@ -80,7 +81,7 @@ export default function LatestWorkSectionComponent() {
           whileHover={{ scale: 1.3 }}
           className="border-b-2 font-semibold md:text-[15px] text-text-four xl:text-[20px]"
         >
-          <a href="/Dastine-Jhay-Bernardo/portfolio">See More</a>
+          <Link to="/Dastine-Jhay-Bernardo/portfolio">See More</Link>
         </motion.div>
         {/* <motion.div
           className="absolute -bottom-20 md:-bottom-32 -right-1 md:-right-10"

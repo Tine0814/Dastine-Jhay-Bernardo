@@ -1,10 +1,10 @@
 import gradpic from "../../assets/img/grad.png";
+import programming from "../../assets/img/python.jpg";
 import travel from "../../assets/img/IMG_0026.jpeg";
 import workout from "../../assets/img/workout.png";
 import city from "../../assets/img/city.png";
 import coffee from "../../assets/img/coffee.png";
 import prog from "../../assets/img/prog.png";
-import programming from "../../assets/img/python.jpg";
 import { easeInOut, motion } from "framer-motion";
 
 export default function AboutMeSectionComponent() {
