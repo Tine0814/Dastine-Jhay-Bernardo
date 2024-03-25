@@ -30,7 +30,7 @@ export default function ContactInformationSectionComponent() {
       id="home"
       className="min-h-screen w-full  flex justify-center items-center bg-color-one overflow-x-hidden"
     >
-      <div className="min-w-full 2xl:min-w-[1300px] p-10 grid place-content-center border-b-2 gap-5 mt-0 lg:-mt-40">
+      <div className="min-w-full 2xl:min-w-[1300px] p-10 grid place-content-center border-b-2 gap-5 mt-0 lg:-mt-40 pb-0">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
