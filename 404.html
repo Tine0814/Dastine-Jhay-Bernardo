@@ -7,9 +7,12 @@
     <script type="text/javascript">
       // Get the current path and query parameters
       const currentPath = window.location.pathname + window.location.search;
-      // Construct the redirect URL for GitHub Pages
+      // Base path for your GitHub Pages repository
+      const basePath = "/Dastine-Jhay-Bernardo";
+      // Construct the full redirect URL for GitHub Pages
+      const redirectTo = basePath + "/index.html#" + currentPath;
       // Redirect to index.html with the current path appended as a hash
-      window.location.replace(currentPath);
+      window.location.replace(redirectTo);
     </script>
   </head>
   <body>
