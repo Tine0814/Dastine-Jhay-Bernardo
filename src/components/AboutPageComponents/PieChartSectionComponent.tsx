@@ -3,56 +3,28 @@ import { easeInOut, motion } from "framer-motion";
 
 export default function PieChartSectionComponent() {
   const frontEnd = [
-    {
-      skills: "HTML5 / CSS3",
-    },
-    {
-      skills: "UI / UX Design",
-    },
-    {
-      skills: "JavaScript (ES6+)",
-    },
-    {
-      skills: "Responsive Web Design",
-    },
-    {
-      skills: "Frontend Frameworks (React, Next)",
-    },
-    {
-      skills: "CSS Frameworks (Bootstrap, Tailwind)",
-    },
+    { skills: "HTML5 / CSS3" },
+    { skills: "UI / UX Design" },
+    { skills: "JavaScript (ES6+) / TypeScript" },
+    { skills: "Responsive Web Design" },
+    { skills: "Frontend Frameworks (React, Next, Vue)" },
+    { skills: "CSS Frameworks (Bootstrap, Tailwind)" },
   ];
   const backEnd = [
-    {
-      skills: "Node.js / Express.js",
-    },
-    {
-      skills: "RESTful API Development",
-    },
-    {
-      skills: "Database Management (SQL/NoSQL)",
-    },
-    {
-      skills: "Authentication and Authorization",
-    },
-    {
-      skills: "REST API Testing (Postman)",
-    },
-    {
-      skills: "Version Control (Git)",
-    },
-    {
-      skills: "Performance Optimization",
-    },
-    {
-      skills: "Error Handling and Debugging",
-    },
+    { skills: "Node.js / Express.js" },
+    { skills: "RESTful API Development" },
+    { skills: "Database Management (SQL/NoSQL)" },
+    { skills: "Authentication and Authorization" },
+    { skills: "REST API Testing (Postman)" },
+    { skills: "Version Control (Git)" },
+    { skills: "Performance Optimization" },
+    { skills: "Error Handling and Debugging" },
   ];
 
   return (
     <section
       id="home"
-      className="w-full  flex justify-center shadow-inner bg-color-one overflow-x-hidden"
+      className="w-full flex justify-center shadow-inner bg-main-background-light dark:bg-main-background-dark text-secondary-text-light dark:text-secondary-text-dark transition-colors duration-300 overflow-x-hidden"
     >
       <div className="min-w-full 2xl:min-w-[1300px] flex justify-center items-center p-10">
         <div className="flex flex-col justify-center items-center gap-10">
@@ -70,7 +42,7 @@ export default function PieChartSectionComponent() {
                 {
                   data: [
                     { id: 0, value: 60, label: "Front-end", color: "#101011" },
-                    { id: 1, value: 40, label: "Back-end ", color: "#948d8d" },
+                    { id: 1, value: 40, label: "Back-end", color: "#948d8d" },
                   ],
                   innerRadius: 30,
                   paddingAngle: 5,
@@ -95,12 +67,12 @@ export default function PieChartSectionComponent() {
                 x: 0,
                 transition: { duration: 0.8, ease: easeInOut, delay: 0.6 },
               }}
-              className="w-[300px] md:w-[400px] bg-color-three shadow-xl rounded-lg p-10"
+              className="w-[300px] md:w-[400px] bg-secondary-background-light dark:bg-secondary-background-dark shadow-xl rounded-lg p-10 transition-colors duration-300"
             >
-              <h1 className="text-text-four font-black text-[25px]">
+              <h1 className="text-primary-color-light dark:text-primary-color-dark font-black text-[25px] transition-colors duration-300">
                 Front-End
               </h1>
-              <ul className="mt-5 list-disc text-[20px] text-text-four leading-10">
+              <ul className="mt-5 list-disc text-[20px] text-primary-text-light dark:text-primary-text-dark leading-10 transition-colors duration-300">
                 {frontEnd.map((frontend, index) => (
                   <li key={index}>{frontend.skills}</li>
                 ))}
@@ -114,12 +86,12 @@ export default function PieChartSectionComponent() {
                 x: 0,
                 transition: { duration: 0.8, ease: easeInOut, delay: 0.6 },
               }}
-              className="w-[300px] md:w-[400px] bg-color-three shadow-xl rounded-lg p-10"
+              className="w-[300px] md:w-[400px] bg-secondary-background-light dark:bg-secondary-background-dark shadow-xl rounded-lg p-10 transition-colors duration-300"
             >
-              <h1 className="text-text-four font-black text-[25px]">
+              <h1 className="text-primary-color-light dark:text-primary-color-dark font-black text-[25px] transition-colors duration-300">
                 Back-End
               </h1>
-              <ul className="mt-5 list-disc text-[20px] text-text-four leading-10">
+              <ul className="mt-5 list-disc text-[20px] text-primary-text-light dark:text-primary-text-dark leading-10 transition-colors duration-300">
                 {backEnd.map((backend, index) => (
                   <li key={index}>{backend.skills}</li>
                 ))}

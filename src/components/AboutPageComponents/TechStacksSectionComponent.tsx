@@ -146,7 +146,7 @@ export default function TechStacksSectionComponent() {
   return (
     <section
       id="home"
-      className="lg:min-h-[600px] w-full  flex justify-center shadow-inner text-[#1e1a53] bg-color-three"
+      className="lg:min-h-[600px] w-full flex justify-center shadow-inner bg-secondary-background-light dark:bg-secondary-background-dark text-primary-text-light dark:text-primary-text-dark transition-colors duration-300"
     >
       <motion.div
         initial={{ opacity: 0, y: -200 }}
@@ -157,8 +157,10 @@ export default function TechStacksSectionComponent() {
         }}
         className="min-w-full 2xl:min-w-[1300px] flex flex-col items-center gap-5 p-20"
       >
-        <h1 className="text-[25px] font-semibold text-text-one">Tooling</h1>
-        <div className="bg-color-four rounded-md shadow-xl p-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-content-center gap-10">
+        <h1 className="text-[25px] font-semibold text-primary-text-light dark:text-primary-text-dark transition-colors duration-300">
+          Tooling
+        </h1>
+        <div className="bg-main-background-light dark:bg-main-background-dark rounded-md shadow-xl p-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-content-center gap-10 transition-colors duration-300">
           {techStacks.map((tech, index) => (
             <motion.div
               whileHover={{ scale: 1.1 }}

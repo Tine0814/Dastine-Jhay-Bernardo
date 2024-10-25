@@ -3,24 +3,23 @@ import OutlineButtonComponent from "../Buttons/OutlineButtonComponent";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import background from "../../assets/img/background.jpg";
 
-const PDF_FILE_URL =
+export const PDF_FILE_URL =
   "https://tine0814.github.io/Dastine-Jhay-Bernardo/CV-Dastine-Jhay-Bernardo.pdf";
 
+export const downloadFileAtURL = (url: string) => {
+  const fileName = url.split("/").pop();
+  if (!fileName) {
+    console.error("Unable to determine file name from URL:", url);
+    return;
+  }
+  const aTag = document.createElement("a");
+  aTag.href = url;
+  aTag.setAttribute("download", fileName);
+  document.body.appendChild(aTag);
+  aTag.click();
+  aTag.remove();
+};
 export default function HeroSectionComponent() {
-  const downloadFileAtURL = (url: string) => {
-    const fileName = url.split("/").pop();
-    if (!fileName) {
-      console.error("Unable to determine file name from URL:", url);
-      return;
-    }
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download", fileName);
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
-  };
-
   const social = [
     {
       icon: <FaGithub className="text-[30px]" />,
