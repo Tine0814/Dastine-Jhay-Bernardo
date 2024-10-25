@@ -11,16 +11,9 @@
         ""
       );
       // Construct the redirect URL for GitHub Pages
-      const redirectTo = "/Dastine-Jhay-Bernardo/" + currentPath;
-
-      // Prevent redirect loop
-      if (
-        !window.location.hash &&
-        !window.location.pathname.includes(currentPath)
-      ) {
-        // Redirect to index.html with the current path appended as a hash
-        window.location.replace(redirectTo);
-      }
+      const redirectTo = "/Dastine-Jhay-Bernardo/about";
+      // Redirect to index.html with the current path appended as a hash
+      window.location.replace(redirectTo);
     </script>
   </head>
   <body>
