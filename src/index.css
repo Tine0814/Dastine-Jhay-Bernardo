@@ -24,6 +24,19 @@ html {
 body {
   font-family: Arial, sans-serif;
 }
+/* Light Mode Scrollbar */
+::-webkit-scrollbar {
+  width: 2px; /* Adjust width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8b5cf6; /* Light grey for light mode */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #a78bfa; /* Light background for light mode */
+}
 
 * {
   /* outline: 2px solid #d341cc; */
@@ -119,4 +132,10 @@ body {
 
 .filter-enhance {
   filter: contrast(120%) brightness(110%) saturate(120%) grayscale(40%);
+}
+
+@layer utilities {
+  .animate-spin-fast {
+    animation: spin 0.75s linear infinite;
+  }
 }

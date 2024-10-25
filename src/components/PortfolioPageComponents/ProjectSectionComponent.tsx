@@ -70,7 +70,7 @@ export default function ProjectSectionComponent() {
   return (
     <section
       id="home"
-      className="w-full flex justify-center shadow-inner bg-color-three overflow-x-hidden pb-20"
+      className="w-full flex justify-center shadow-inner bg-secondary-background-light dark:bg-secondary-background-dark text-primary-text-light dark:text-primary-text-dark transition-colors duration-300 pb-20 overflow-x-hidden"
     >
       <div className="min-w-full 2xl:min-w-[1300px] flex justify-center items-center p-10">
         <motion.div
@@ -79,7 +79,7 @@ export default function ProjectSectionComponent() {
             opacity: 1,
             transition: { duration: 0.8, ease: easeInOut, delay: 1.5 },
           }}
-          className="w-full  grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10"
+          className="w-full grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10"
         >
           {myWork.map((work, index) => (
             <motion.div
@@ -88,28 +88,26 @@ export default function ProjectSectionComponent() {
                 transition: { duration: 0.6, ease: easeInOut },
               }}
               key={index}
-              className="w-full lg:w-[400px] bg-color-three rounded-md container-shadow p-3 hover-show-icon cursor-pointer"
+              className="w-full lg:w-[400px] bg-main-background-light dark:bg-main-background-dark text-secondary-text-light dark:text-secondary-text-dark rounded-md container-shadow p-3 hover-show-icon cursor-pointer transition-colors duration-300"
               onClick={() => {
-                if (!work.url) {
-                  {
-                    ("/");
-                  }
-                } else {
+                if (work.url) {
                   window.open(work.url, "_blank");
                 }
               }}
             >
-              <div className="w-full h-[180px] rounded-md grid place-content-center overflow-hidden p-5 bg-color-four">
-                <img src={work.image} alt="" className="w-[300px]" />
+              <div className="w-full h-[180px] rounded-md grid place-content-center overflow-hidden p-5 bg-main-background-light dark:bg-main-background-dark">
+                <img src={work.image} alt={work.title} className="w-[300px]" />
               </div>
               <div className="flex justify-between items-center">
                 <div className="ml-4 mt-5 text-[15px]">
-                  <h1 className="text-text-one">{work.title}</h1>
-                  <h2 className="text-text-four font-bold mt-2">
+                  <h1 className="text-primary-text-light dark:text-primary-text-dark transition-colors duration-300">
+                    {work.title}
+                  </h1>
+                  <h2 className="text-primary-color-light dark:text-primary-color-dark font-bold mt-2 transition-colors duration-300">
                     {work.projectTitle}
                   </h2>
                 </div>
-                <motion.div className="text-[70px] opacity-0 text-color-five">
+                <motion.div className="text-[70px] opacity-0 text-primary-color-light dark:text-primary-color-dark">
                   <MdOutlineKeyboardArrowRight />
                 </motion.div>
               </div>

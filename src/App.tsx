@@ -8,14 +8,15 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import NavHeaderFooterSideBarLayout from "./components/Layout/NavHeaderFooterSideBarLayout";
 import ScrollToTop from "./utils/ScrollToTop";
 import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
 
 function App(): JSX.Element {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const delay = setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(delay);
   }, []);
@@ -23,9 +24,7 @@ function App(): JSX.Element {
   return (
     <>
       {isLoading ? (
-        <div className="h-screen w-full bg-red-200 grid place-items-center">
-          Loading...
-        </div>
+        <Loader />
       ) : (
         <BrowserRouter>
           <ScrollToTop />

@@ -41,8 +41,8 @@ export default function PieChartSectionComponent() {
               series={[
                 {
                   data: [
-                    { id: 0, value: 60, label: "Front-end", color: "#101011" },
-                    { id: 1, value: 40, label: "Back-end", color: "#948d8d" },
+                    { id: 0, value: 60, label: "Front-end", color: "#8B5CF6" },
+                    { id: 1, value: 40, label: "Back-end", color: "#A78BFA" },
                   ],
                   innerRadius: 30,
                   paddingAngle: 5,

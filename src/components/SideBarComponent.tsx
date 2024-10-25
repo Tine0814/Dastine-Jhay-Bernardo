@@ -1,5 +1,13 @@
+import { motion } from "framer-motion";
 import { SetStateAction, useEffect, useState } from "react";
-import { MdClose } from "react-icons/md";
+import {
+  MdClose,
+  MdHome,
+  MdPerson,
+  MdWork,
+  MdFolder,
+  MdContactMail,
+} from "react-icons/md";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -15,18 +23,27 @@ const SideBarComponent = ({ isOpen, toggleSidebar }: Props) => {
     {
       title: "Home",
       url: "/Dastine-Jhay-Bernardo",
+      icon: <MdHome />,
     },
     {
       title: "About",
       url: "/Dastine-Jhay-Bernardo/about",
+      icon: <MdPerson />,
     },
     {
       title: "Experience",
       url: "/Dastine-Jhay-Bernardo/experience",
+      icon: <MdWork />,
     },
     {
       title: "Portfolio",
       url: "/Dastine-Jhay-Bernardo/portfolio",
+      icon: <MdFolder />,
+    },
+    {
+      title: "Contact",
+      url: "/Dastine-Jhay-Bernardo/contact",
+      icon: <MdContactMail />,
     },
   ];
 
@@ -48,7 +65,10 @@ const SideBarComponent = ({ isOpen, toggleSidebar }: Props) => {
   };
 
   return (
-    <aside
+    <motion.aside
+      initial={{ width: 0 }}
+      animate={{ width: "16rem" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       className={`fixed inset-y-0 left-0 z-50 w-64 bg-background-header-light dark:bg-background-header-dark shadow-md transform flex flex-col justify-between text-secondary-text-light dark:text-secondary-text-dark ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}
@@ -65,14 +85,15 @@ const SideBarComponent = ({ isOpen, toggleSidebar }: Props) => {
       <nav className="mt-6 flex-1">
         <ul className="space-y-2 px-4">
           {navItems.map((item, index) => (
-            <li key={index}>
+            <li key={index} className="flex items-center gap-2">
+              <span className="text-[25px]">{item.icon}</span>
               <Link
                 to={item.url}
                 className={`${
                   item.title === activeNavItem
                     ? "bg-primary-color-light dark:bg-primary-color-dark text-primary-text-dark font-bold"
                     : ""
-                } block py-2 px-4 rounded-md hover:bg-primary-color-light hover:dark:bg-primary-color-dark hover:text-primary-text-dark transition-colors duration-300`}
+                } flex-grow block py-2 px-4 rounded-md hover:bg-primary-color-light hover:dark:bg-primary-color-dark hover:text-primary-text-dark transition-colors duration-300`}
                 onClick={() => handleClick(item.title)}
               >
                 {item.title}
@@ -90,7 +111,7 @@ const SideBarComponent = ({ isOpen, toggleSidebar }: Props) => {
           © {currentYear} Dastine Jhay Bernardo
         </a>
       </div>
-    </aside>
+    </motion.aside>
   );
 };
 

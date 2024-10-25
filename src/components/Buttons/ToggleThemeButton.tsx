@@ -22,17 +22,17 @@ const ToggleThemeButton: React.FC = () => {
   return (
     <div
       onClick={handleToggle}
-      className="flex items-center justify-center w-[95px] h-[40px] p-1 bg-gray-200 dark:bg-gray-600 rounded-full cursor-pointer relative transition-all duration-300"
+      className="flex items-center justify-center w-[80px] h-[30px] p-1 bg-gray-200 dark:bg-gray-600 rounded-full cursor-pointer relative transition-all duration-300"
     >
       <div
-        className={`absolute h-7 w-7 bg-white dark:bg-gray-800 rounded-full transition-transform duration-300 
+        className={`absolute h-6 w-6 bg-white dark:bg-gray-800 rounded-full transition-transform duration-300 
           ${mode === "dark" ? "translate-x-full" : "-translate-x-full"}
         `}
       >
         {mode === "dark" ? (
-          <FaMoon className="text-yellow-400 text-[20px] mx-auto mt-1" />
+          <FaMoon className="text-yellow-400 text-[15px] mx-auto mt-1" />
         ) : (
-          <IoSunnySharp className="text-yellow-400 text-[20px] mx-auto mt-1" />
+          <IoSunnySharp className="text-yellow-400 text-[15px] mx-auto mt-1" />
         )}
       </div>
     </div>
