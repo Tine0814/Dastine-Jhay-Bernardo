@@ -153,7 +153,7 @@ export default function TechStacksSectionComponent() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.8, ease: easeInOut, delay: 1 },
+          transition: { duration: 0.8, ease: easeInOut },
         }}
         className="min-w-full 2xl:min-w-[1300px] flex flex-col items-center gap-5 p-20"
       >
@@ -166,7 +166,7 @@ export default function TechStacksSectionComponent() {
               whileInView={{
                 opacity: 1,
                 transition: {
-                  duration: 1.8,
+                  duration: 0.8,
                   ease: easeInOut,
                   delay: tech.delay,
                 },

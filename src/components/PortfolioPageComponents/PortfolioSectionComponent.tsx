@@ -1,6 +1,7 @@
 import { easeInOut, motion } from "framer-motion";
 import animation from "../../assets/lottie/Animation2 - 1711175468407.json";
 import Lottie from "lottie-react";
+import GradiantText from "../Text/GradiantText";
 
 export default function PortfolioSectionComponent() {
   return (
@@ -13,7 +14,7 @@ export default function PortfolioSectionComponent() {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { duration: 0.5, ease: easeInOut, delay: 0.8 },
+            transition: { duration: 0.5, ease: easeInOut },
           }}
           className="relative flex justify-bettween flex-col md:flex-row  items-center"
         >
@@ -22,12 +23,12 @@ export default function PortfolioSectionComponent() {
             animate={{
               opacity: 1,
               x: 0,
-              transition: { duration: 0.8, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 0.8, ease: easeInOut },
             }}
             className="xl:w-[500px]"
           >
             <h1 className="text-[70px] xl:text-[80px] font-black text-text-four">
-              Portfolio.
+              <GradiantText childeren={"Portfolio."} />
             </h1>
             <h2 className="text-[25px] text-text-one">
               Check out some of my latest Projects
@@ -43,7 +44,7 @@ export default function PortfolioSectionComponent() {
             animate={{
               opacity: 1,
               x: 0,
-              transition: { duration: 0.8, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 0.8, ease: easeInOut },
             }}
             className="relative"
           >

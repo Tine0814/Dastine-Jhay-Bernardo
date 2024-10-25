@@ -3,6 +3,7 @@ import { Squash as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { SetStateAction, useEffect, useState } from "react";
 import OutlineButtonComponent from "./Buttons/OutlineButtonComponent";
+import ToggleThemeButton from "./Buttons/ToggleThemeButton";
 
 export default function NavComponent() {
   const [isOpen, setOpen] = useState(false);
@@ -50,7 +51,7 @@ export default function NavComponent() {
           opacity: 0,
           transition: { duration: 1, ease: easeInOut, delay: 0.8 },
         }}
-        className="w-full flex justify-center items-center z-50 shadow-md bg-color-two"
+        className="w-full fixed flex justify-center items-center z-50 shadow-md bg-white dark:bg-color-two"
       >
         <div className="flex justify-between py-4 px-10 min-w-full 2xl:min-w-[1300px] items-center">
           <Link to="/Dastine-Jhay-Bernardo">
@@ -83,12 +84,14 @@ export default function NavComponent() {
           <div className="flex md:hidden text-white">
             <Hamburger toggled={isOpen} size={30} toggle={setOpen} />
           </div>
-          <div className="hidden md:flex">
+          <div className="hidden md:flex gap-5">
+            <ToggleThemeButton />
             <OutlineButtonComponent
               label="Say Hello"
               onClick={() => navigate("/Dastine-Jhay-Bernardo/contact")}
             />
           </div>
+          {/* mobile navigation */}
           {isOpen && (
             <AnimatePresence>
               <motion.div

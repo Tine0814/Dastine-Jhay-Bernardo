@@ -29,7 +29,7 @@ export default function LatestWorkSectionComponent() {
     },
   ];
   return (
-    <section className="flex justify-center p-0 md:p-10 shadow-2xl overflow-hidden bg-color-three">
+    <section className="flex justify-center p-0 md:p-10 shadow-2xl overflow-hidden bg-color-three dark:bg-color-two">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{

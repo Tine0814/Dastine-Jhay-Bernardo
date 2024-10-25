@@ -6,28 +6,29 @@ import city from "../../assets/img/city.png";
 import coffee from "../../assets/img/coffee.png";
 import prog from "../../assets/img/prog.png";
 import { easeInOut, motion } from "framer-motion";
+import GradiantText from "../Text/GradiantText";
 
 export default function AboutMeSectionComponent() {
   const images = [
     {
       image: prog,
-      delay: 2,
+      delay: 0.2,
     },
     {
       image: workout,
-      delay: 2.2,
+      delay: 0.4,
     },
     {
       image: city,
-      delay: 2.4,
+      delay: 0.6,
     },
     {
       image: coffee,
-      delay: 2.6,
+      delay: 0.8,
     },
     {
       image: travel,
-      delay: 2.8,
+      delay: 1,
     },
   ];
   return (
@@ -40,7 +41,7 @@ export default function AboutMeSectionComponent() {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { duration: 0.5, ease: easeInOut, delay: 0.8 },
+            transition: { duration: 1, ease: easeInOut },
           }}
           className="relative flex justify-bettween flex-col md:flex-row border-b-2  items-center"
         >
@@ -49,12 +50,12 @@ export default function AboutMeSectionComponent() {
             animate={{
               opacity: 1,
               x: 0,
-              transition: { duration: 0.8, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 0.8, ease: easeInOut },
             }}
             className="md:w-[320px] xl:w-[500px]"
           >
             <h1 className="text-[70px] xl:text-[80px] font-black text-text-four">
-              about.
+              <GradiantText childeren={"About."} />
             </h1>
             <h2 className="text-[25px] text-text-one">
               I'm a full-stack developer in Philippines.
@@ -71,7 +72,7 @@ export default function AboutMeSectionComponent() {
             animate={{
               opacity: 1,
               x: 0,
-              transition: { duration: 0.8, ease: easeInOut, delay: 1.8 },
+              transition: { duration: 0.8, ease: easeInOut },
             }}
             className="relative"
           >
