@@ -17,7 +17,7 @@ const NavHeaderFooterSideBarLayout = ({
 
   return (
     <div>
-      <div className="flex h-screen bg-gray-50 text-gray-900">
+      <div className="flex h-screen">
         <SideBarComponent isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         <div className="flex-1 flex flex-col overflow-hidden">
           <HeaderComponent onClick={toggleSidebar} />
