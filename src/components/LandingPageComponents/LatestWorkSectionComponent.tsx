@@ -1,20 +1,7 @@
-import los from "../../assets/img/LOS.png";
-import excelinkProj from "../../assets/img/excelinkProj.png";
-import lilo from "../../assets/img/LiloDashboard.png";
-import safc from "../../assets/img/SAFC.png";
-import brandedTech from "../../assets/img/brandedtech.jpg";
 import { easeInOut, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CardComponent from "../CardComponent";
-import { FaNodeJs, FaReact } from "react-icons/fa";
-import { BsFiletypeSql } from "react-icons/bs";
-import {
-  SiMui,
-  SiPrisma,
-  SiRedux,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
+
 import { myWork } from "../ProjectListComponent";
 
 export default function LatestWorkSectionComponent() {
