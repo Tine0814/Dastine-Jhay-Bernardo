@@ -1,15 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Squash as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { SetStateAction, useEffect, useState } from "react";
-import OutlineButtonComponent from "./Buttons/OutlineButtonComponent";
 import ToggleThemeButton from "./Buttons/ToggleThemeButton";
 
 export default function NavComponent() {
   const [isOpen, setOpen] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("");
-
-  const navigate = useNavigate();
 
   const navItems = [
     {
@@ -86,10 +83,6 @@ export default function NavComponent() {
           </div>
           <div className="hidden md:flex gap-5">
             <ToggleThemeButton />
-            <OutlineButtonComponent
-              label="Say Hello"
-              onClick={() => navigate("/Dastine-Jhay-Bernardo/contact")}
-            />
           </div>
           {/* mobile navigation */}
           {isOpen && (
@@ -127,13 +120,6 @@ export default function NavComponent() {
                     </li>
                   ))}
                 </motion.ul>
-                <OutlineButtonComponent
-                  label="Say Hello"
-                  onClick={() => {
-                    navigate("/Dastine-Jhay-Bernardo/contact");
-                    setOpen(false);
-                  }}
-                />
               </motion.div>
             </AnimatePresence>
           )}

@@ -1,32 +1,23 @@
-import ts from "../../assets/img/ts.png";
-import js from "../../assets/img/js-API2.png";
+import los from "../../assets/img/LOS.png";
+import excelinkProj from "../../assets/img/excelinkProj.png";
 import lilo from "../../assets/img/LiloDashboard.png";
+import safc from "../../assets/img/SAFC.png";
+import brandedTech from "../../assets/img/brandedtech.jpg";
 import { easeInOut, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CardComponent from "../CardComponent";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { BsFiletypeSql } from "react-icons/bs";
+import {
+  SiMui,
+  SiPrisma,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { myWork } from "../ProjectListComponent";
 
 export default function LatestWorkSectionComponent() {
-  const myWork = [
-    {
-      image: lilo,
-      title: "HR Management System",
-      projectTitle: "20023 Branded Tech (Fullstack)",
-      url: "https://demo.lilohr.com/admin/dashboard",
-    },
-    {
-      image: ts,
-      title: "REST API Express.js + mysql + typescript",
-      projectTitle: "Side Project (Backend)",
-      url: "https://github.com/Tine0814/Crud-node-sql",
-    },
-    {
-      image: js,
-      title: "REST API Express.js + mysql",
-      projectTitle: "Side Project (Backend)",
-      url: "https://github.com/Tine0814/Crud-node-mysql",
-    },
-  ];
-
   return (
     <section className="flex justify-center p-0 md:p-10 shadow-2xl overflow-hidden text-secondary-text-light dark:text-secondary-text-dark bg-secondary-background-light dark:bg-secondary-background-dark transition-colors duration-300">
       <motion.div
@@ -45,13 +36,18 @@ export default function LatestWorkSectionComponent() {
           <span className="md:w-[200px] xl:w-[340px] h-[2px] bg-main-background-light dark:bg-main-background-dark"></span>
         </div>
         <div className="w-full grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10 lg:place-content-center">
-          {myWork.map((work, index) => (
+          {myWork.slice(0, 3).map((work, index) => (
             <CardComponent
               key={index}
               image={work.image}
               title={work.title}
-              description={work.projectTitle}
+              shortDescription={work.projectTitle}
               url={work.url}
+              fullDescription={work.description}
+              tags={work.tags}
+              role={work.role}
+              allTech={work.allTech}
+              companyLogo={work.companyLogo}
             />
           ))}
         </div>

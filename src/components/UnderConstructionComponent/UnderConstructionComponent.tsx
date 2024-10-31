@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 import animation from "../../assets/lottie/Animation - 1711165809113.json";
-import ContaineButtonComponent from "../Buttons/ContaineButtonComponent";
+import ContaineButtonComponent from "../Buttons/ButtonComponent";
 import { useNavigate } from "react-router-dom";
 
 export default function UnderConstructionComponent() {

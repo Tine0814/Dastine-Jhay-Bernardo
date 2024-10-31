@@ -3,6 +3,7 @@ import { HiArrowRight } from "react-icons/hi";
 import GradiantText from "../Text/GradiantText";
 import { downloadFileAtURL, PDF_FILE_URL } from "./HeroSectionComponent";
 import heroImg from "../../assets/img/me.png";
+import ButtonComponent from "../Buttons/ButtonComponent";
 
 const NewHeroSectionComponent = () => {
   return (
@@ -26,26 +27,35 @@ const NewHeroSectionComponent = () => {
               and forged with precision.
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <motion.button
+              <motion.div
                 initial={{ opacity: 0, x: -500 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: easeInOut, delay: 0.5 }}
-                className="px-4 py-2 sm:px-6 sm:py-3 bg-primary-color-light hover:bg-primary-color-dark dark:bg-primary-color-dark dark:hover:bg-primary-color-light text-primary-text-dark rounded-md font-bold transition-colors duration-300 flex items-center"
               >
-                View Experience
-                <HiArrowRight className="ml-2 h-5 w-5" />
-              </motion.button>
-              <motion.button
+                <ButtonComponent
+                  isContaine={true}
+                  label={
+                    <div className="flex gap-2 items-center">
+                      View Experience
+                      <HiArrowRight />
+                    </div>
+                  }
+                />
+              </motion.div>
+              <motion.div
                 initial={{ opacity: 0, x: 500 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: easeInOut, delay: 0.5 }}
-                onClick={() => {
-                  downloadFileAtURL(PDF_FILE_URL);
-                }}
-                className="px-4 py-2 sm:px-6 sm:py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-200 rounded-md transition-colors duration-300"
               >
-                Download CV
-              </motion.button>
+                <ButtonComponent
+                  onClick={() => {
+                    downloadFileAtURL(PDF_FILE_URL);
+                  }}
+                  label={
+                    <div className="flex gap-2 items-center">Download CV</div>
+                  }
+                />
+              </motion.div>
             </div>
           </motion.div>
 

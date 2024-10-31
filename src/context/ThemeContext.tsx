@@ -37,7 +37,6 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
 
   const toggleTheme = () => {
     const newMode = mode === "light" ? "dark" : "light";
-    console.log(`Toggling theme to ${newMode}`);
     setMode(newMode);
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", newMode);
@@ -48,7 +47,6 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   useEffect(() => {
     const isDark = mode === "dark";
     document.documentElement.classList.toggle("dark", isDark);
-    console.log("HTML classes:", document.documentElement.className);
   }, [mode]);
 
   return (
