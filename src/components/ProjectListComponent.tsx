@@ -1,5 +1,13 @@
-import { BsFiletypeSql } from "react-icons/bs";
-import { FaNodeJs, FaPhp, FaReact } from "react-icons/fa";
+import { BsFiletypeXml } from "react-icons/bs";
+import {
+  FaBootstrap,
+  FaCss3,
+  FaHtml5,
+  FaJs,
+  FaNodeJs,
+  FaPhp,
+  FaReact,
+} from "react-icons/fa";
 import {
   SiAxios,
   SiMui,
@@ -22,6 +30,15 @@ import toDo from "../assets/img/toDo.png";
 import clinic from "../assets/img/clinic_inventory.png";
 import dragonball from "../assets/img/dragon.png";
 import portfolio from "../assets/img/firstPortfolio.png";
+import excelinkLogo from "../assets/img/excelinkLogo.png";
+import {
+  DiCodeigniter,
+  DiJqueryLogo,
+  DiMongodb,
+  DiMsqlServer,
+} from "react-icons/di";
+import { LuFileJson2 } from "react-icons/lu";
+import carPicker from "../assets/img/carPicker.png";
 
 export const myWork = [
   {
@@ -48,7 +65,7 @@ export const myWork = [
         Node Express
       </div>,
       <div className="flex gap-2 items-center">
-        <BsFiletypeSql />
+        <DiMsqlServer />
         MS SQL
       </div>,
       <div className="flex gap-2 items-center">
@@ -74,20 +91,6 @@ export const myWork = [
       <div className="flex gap-2 items-center">ZOD</div>,
       <div className="flex gap-2 items-center">YUP</div>,
       <div className="flex gap-2 items-center">LDAP</div>,
-    ],
-    tags: [
-      <div className="flex gap-2 items-center">
-        <FaReact />
-        React
-      </div>,
-      <div className="flex gap-2 items-center">
-        <FaNodeJs />
-        Node Express
-      </div>,
-      <div className="flex gap-2 items-center">
-        <BsFiletypeSql />
-        MS SQL
-      </div>,
     ],
     role: (
       <ul className="list-disc grid grid-cols-1 md:grid-cols-2 gap-5 ">
@@ -122,6 +125,7 @@ export const myWork = [
   },
   {
     image: excelinkProj,
+    companyLogo: excelinkLogo,
     title: "Accounting Management with HR Management System",
     description:
       "The Accounting Management with HR Management System is an all-in-one solution that centralizes essential business operations, including inventory, sales, HRIS, payroll, accounting transactions, financial reporting, and tax compliance. By integrating these modules, the system streamlines accounting and HR tasks, enhancing efficiency and ensuring accurate, real-time data management in a single platform",
@@ -160,20 +164,6 @@ export const myWork = [
         Axios
       </div>,
     ],
-    tags: [
-      <div className="flex gap-2 items-center">
-        <FaReact />
-        React
-      </div>,
-      <div className="flex gap-2 items-center">
-        <FaPhp />
-        PHP
-      </div>,
-      <div className="flex gap-2 items-center">
-        <SiMysql />
-        MySQL
-      </div>,
-    ],
     role: (
       <ul className="list-disc grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <li>
@@ -201,14 +191,14 @@ export const myWork = [
         </li>
       </ul>
     ),
-    companyUrl: "https://www.facebook.com/excelinkph?mibextid=LQQJ4d",
+    companyUrl: "https://www.excelinkph.io/",
   },
   {
     image: lilo,
     title: "HR Management System",
     companyLogo: brandedTech,
     description:
-      "An LOS (Loan Origination System) is a digital platform that helps financial institutions manage and streamline the loan application, processing, and approval process. It is commonly used by banks, credit unions, and other lending institutions to reduce manual work, increase processing speed, and improve data accuracy and compliance.",
+      "An HR Management System is a digital platform that streamlines HR tasks like employee onboarding, attendance, performance reviews, and payroll. It reduces administrative workload, improves data accuracy, ensures compliance, and provides insights for strategic HR decisions, enhancing productivity and employee experience.",
 
     projectTitle: (
       <div>
@@ -234,6 +224,66 @@ export const myWork = [
         </li>
       </ul>
     ),
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <DiJqueryLogo />
+        JQuery
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaPhp />
+        PHP
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiMysql />
+        MySQL
+      </div>,
+      <div className="flex gap-2 items-center">
+        <DiCodeigniter />
+        Codeigniter
+      </div>,
+      <div className="flex gap-2 items-center">
+        <LuFileJson2 />
+        AJAX
+      </div>,
+      <div className="flex gap-2 items-center">
+        <BsFiletypeXml />
+        XML
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaBootstrap />
+        Bootstrap
+      </div>,
+    ],
+    companyUrl: "https://www.facebook.com/20023brandedtechnology",
+  },
+  {
+    image: carPicker,
+    title: "Car Picker",
+    description:
+      "I am pleased to present this car picker project design as a proposed solution for SAFC’s upcoming project. Developed with a focus on enhancing the user experience and operational efficiency, this design aims to simplify car selection, making it more intuitive and accessible. I created this concept to address SAFC’s needs for a streamlined tool that supports both the internal team and end users. By showcasing this in my portfolio, I endorse this project as a valuable addition to SAFC's digital solutions, demonstrating a thoughtful approach to user-friendly design and functionality that can drive engagement and satisfaction",
+    projectTitle: (
+      <div>
+        <span className="text-primary-color-light dark:text-primary-color-light font-bold">
+          Proposed Design Project (Frontend)
+        </span>
+      </div>
+    ),
+    githubUrl: "https://github.com/Tine0814/carPicker",
+    url: "https://car-picker-buqyba4bn-tine0814s-projects.vercel.app/",
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaReact />
+        React
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTailwindcss />
+        Tailwind
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTypescript />
+        TypeScript
+      </div>,
+    ],
   },
   {
     image: ts,
@@ -247,6 +297,20 @@ export const myWork = [
         </span>
       </div>
     ),
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaNodeJs />
+        Node Express
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiMysql />
+        MySql
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTypescript />
+        TypeScript
+      </div>,
+    ],
     githubUrl: "https://github.com/Tine0814/Crud-node-sql",
   },
   {
@@ -262,6 +326,16 @@ export const myWork = [
       </div>
     ),
     githubUrl: "https://github.com/Tine0814/Crud-node-mysql",
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaNodeJs />
+        Node Express
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiMysql />
+        MySql
+      </div>,
+    ],
   },
 
   {
@@ -278,6 +352,20 @@ export const myWork = [
     ),
     url: "https://tine0814.github.io/my-portfolio/",
     githubUrl: "https://github.com/Tine0814/my-portfolio",
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaReact />
+        React
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTailwindcss />
+        Tailwind
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaJs />
+        Email JS
+      </div>,
+    ],
   },
   {
     image: letQuiz,
@@ -291,6 +379,16 @@ export const myWork = [
         </span>
       </div>
     ),
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaReact />
+        React
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTailwindcss />
+        Tailwind
+      </div>,
+    ],
     url: "https://let-quiz.vercel.app/",
     githubUrl: "https://github.com/Tine0814/Let-Quiz",
   },
@@ -306,6 +404,31 @@ export const myWork = [
         </span>
       </div>
     ),
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaReact />
+        React
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaNodeJs />
+        Node Express
+      </div>,
+      <div className="flex gap-2 items-center">
+        <DiMongodb />
+        Mongo DB
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTailwindcss />
+        Tailwind
+      </div>,
+      <div className="flex gap-2 items-center">UseContext</div>,
+      <div className="flex gap-2 items-center">
+        <SiAxios />
+        Axios
+      </div>,
+      <div className="flex gap-2 items-center">ZOD</div>,
+    ],
+
     url: "https://to-do-list-mern-stack-frontend.vercel.app/",
     githubUrl: "https://github.com/Tine0814/ToDoList-MernStack-Frontend",
   },
@@ -321,6 +444,16 @@ export const myWork = [
         </span>
       </div>
     ),
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaReact />
+        React
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTailwindcss />
+        Tailwind
+      </div>,
+    ],
     githubUrl: "https://github.com/Tine0814/Car-Rent",
   },
   {
@@ -335,6 +468,16 @@ export const myWork = [
         </span>
       </div>
     ),
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaReact />
+        React
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiTailwindcss />
+        Tailwind
+      </div>,
+    ],
     githubUrl: "https://github.com/Tine0814/Dragon-ball-game-Landing-page",
   },
   {
@@ -347,6 +490,36 @@ export const myWork = [
         </span>
       </div>
     ),
+    allTech: [
+      <div className="flex gap-2 items-center">
+        <FaHtml5 />
+        HTML
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaCss3 />
+        CSS
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaPhp />
+        PHP
+      </div>,
+      <div className="flex gap-2 items-center">
+        <DiJqueryLogo />
+        JQuery
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaJs />
+        Javascript
+      </div>,
+      <div className="flex gap-2 items-center">
+        <SiMysql />
+        MySQL
+      </div>,
+      <div className="flex gap-2 items-center">
+        <FaBootstrap />
+        Bootstrap
+      </div>,
+    ],
     description:
       "An LOS (Loan Origination System) is a digital platform that helps financial institutions manage and streamline the loan application, processing, and approval process. It is commonly used by banks, credit unions, and other lending institutions to reduce manual work, increase processing speed, and improve data accuracy and compliance.",
     githubUrl: "https://github.com/Tine0814/Clinic-Inventory-System",

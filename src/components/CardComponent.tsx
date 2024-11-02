@@ -14,7 +14,6 @@ interface ProjectShowcaseProps {
   shortDescription: string | ReactNode;
   fullDescription: string;
   image: string;
-  tags?: string[] | ReactNode[];
   githubUrl?: string;
   url?: string;
   role?: ReactNode;
@@ -24,11 +23,10 @@ interface ProjectShowcaseProps {
 }
 
 export default function CardComponent({
-  title = "Awesome Project",
-  shortDescription = "A cutting-edge web application showcasing modern development practices.",
+  title,
+  shortDescription,
   fullDescription,
   image,
-  tags = ["React", "TypeScript", "Tailwind CSS"],
   githubUrl,
   url,
   role,
@@ -69,13 +67,13 @@ export default function CardComponent({
             <img
               src={companyLogo}
               alt=""
-              className="absolute top-0 w-[80px] rounded-md"
+              className="absolute top-0 w-[110px] rounded-md"
             />
           )}
         </div>
         <div className="p-6">
           <div className="mb-4 flex flex-wrap gap-2">
-            {tags.map((tag, index) => (
+            {allTech?.slice(0, 3).map((tag, index) => (
               <span
                 key={index}
                 className="px-2 py-1 text-sm font-medium rounded-full bg-secondary-background-light text-gray-800 dark:bg-secondary-background-dark dark:text-primary-text-dark"
@@ -84,9 +82,9 @@ export default function CardComponent({
               </span>
             ))}
           </div>
-          <p className="text-secondary-text-light dark:text-secondary-text-dark transition-all duration-500 ease-in-out overflow-hidden max-height-[100px]">
+          <div className="text-secondary-text-light dark:text-secondary-text-dark transition-all duration-500 ease-in-out overflow-hidden max-height-[100px]">
             {shortDescription}
-          </p>
+          </div>
         </div>
         <div className="flex justify-end space-x-2 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4">
           {githubUrl && (
@@ -128,7 +126,7 @@ export default function CardComponent({
                 <img
                   src={companyLogo}
                   alt=""
-                  className="absolute top-0 w-[80px] rounded-md"
+                  className="absolute top-0 w-[90px] rounded-md"
                 />
               )}
               <button
@@ -154,7 +152,7 @@ export default function CardComponent({
                     {title}
                   </h2>
                   <div className="mb-4 flex flex-wrap gap-2">
-                    {tags.map((tag, index) => (
+                    {allTech?.slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
@@ -199,12 +197,12 @@ export default function CardComponent({
                       ))}
                     </div>
                   </div>
-                  <p
+                  <div
                     id="modal-description"
                     className="text-primary-text-light dark:text-primary-text-dark mb-6"
                   >
                     {fullDescription}
-                  </p>
+                  </div>
                   <div className="flex flex-wrap gap-4">
                     {githubUrl && (
                       <a

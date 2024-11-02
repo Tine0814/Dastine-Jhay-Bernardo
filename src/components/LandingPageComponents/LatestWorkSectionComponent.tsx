@@ -31,10 +31,11 @@ export default function LatestWorkSectionComponent() {
               shortDescription={work.projectTitle}
               url={work.url}
               fullDescription={work.description}
-              tags={work.tags}
               role={work.role}
               allTech={work.allTech}
               companyLogo={work.companyLogo}
+              companyUrl={work.companyUrl}
+              githubUrl={work.githubUrl}
             />
           ))}
         </div>

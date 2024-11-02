@@ -1,11 +1,14 @@
 import { easeInOut, motion } from "framer-motion";
 import { BiLogoTypescript } from "react-icons/bi";
-import { DiCodeigniter, DiMongodb } from "react-icons/di";
+import { DiCodeigniter, DiMongodb, DiMsqlServer } from "react-icons/di";
 import {
   FaBootstrap,
   FaCss3Alt,
   FaGithub,
   FaHtml5,
+  FaJava,
+  FaLaravel,
+  FaNetworkWired,
   FaNodeJs,
   FaPhp,
   FaReact,
@@ -18,6 +21,9 @@ import {
   SiExpress,
   SiJavascript,
   SiPostman,
+  SiPrisma,
+  SiRedux,
+  SiSpring,
   SiTailwindcss,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -26,6 +32,12 @@ export default function TechStacksSectionComponent() {
   const techStacks = [
     {
       title: "React",
+      icon: <FaReact />,
+      color: "bg-[#2f5ec4]",
+      delay: 0.1,
+    },
+    {
+      title: "React-Native",
       icon: <FaReact />,
       color: "bg-[#2f5ec4]",
       delay: 0.1,
@@ -70,6 +82,12 @@ export default function TechStacksSectionComponent() {
       delay: 0.7,
     },
     {
+      title: "Java",
+      icon: <FaJava />,
+      color: "bg-[#e64c4c]",
+      delay: 0.8,
+    },
+    {
       title: "Csharp",
       icon: <SiCsharp />,
       color: "bg-[#bc46e0]",
@@ -97,6 +115,12 @@ export default function TechStacksSectionComponent() {
       title: "Mysql",
       icon: <GrMysql />,
       color: "bg-[#d78734]",
+      delay: 1.2,
+    },
+    {
+      title: "MS SQL",
+      icon: <DiMsqlServer />,
+      color: "bg-[#FF0000]",
       delay: 1.2,
     },
     {
@@ -139,6 +163,36 @@ export default function TechStacksSectionComponent() {
       title: "Postman",
       icon: <SiPostman />,
       color: "bg-[#f36b33]",
+      delay: 1.9,
+    },
+    {
+      title: "Redux Toolkit",
+      icon: <SiRedux />,
+      color: "bg-[#8B5CF6]",
+      delay: 1.9,
+    },
+    {
+      title: "Prisma (ORM)",
+      icon: <SiPrisma />,
+      color: "bg-[#888888]",
+      delay: 1.9,
+    },
+    {
+      title: "Laravel",
+      icon: <FaLaravel />,
+      color: "bg-[#f36b33]",
+      delay: 1.9,
+    },
+    {
+      title: "Java Spring Boot",
+      icon: <SiSpring />,
+      color: "bg-[#4fac3f]",
+      delay: 1.9,
+    },
+    {
+      title: "LDAP",
+      icon: <FaNetworkWired />,
+      color: "bg-[#888888]",
       delay: 1.9,
     },
   ];
