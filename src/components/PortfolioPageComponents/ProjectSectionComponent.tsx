@@ -15,7 +15,7 @@ export default function ProjectSectionComponent() {
             opacity: 1,
             transition: { duration: 0.8, ease: easeInOut, delay: 1.5 },
           }}
-          className="w-full grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10"
+          className="w-full grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10 blur-hover"
         >
           {myWork.map((work, index) => (
             <CardComponent

@@ -22,7 +22,7 @@ export default function LatestWorkSectionComponent() {
           </h1>
           <span className="md:w-[200px] xl:w-[340px] h-[2px] bg-main-background-light dark:bg-main-background-dark"></span>
         </div>
-        <div className="w-full grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10 lg:place-content-center">
+        <div className="w-full grid xl:grid-cols-2 2xl:grid-cols-3 gap-10 z-10 lg:place-content-center blur-hover">
           {myWork.slice(0, 3).map((work, index) => (
             <CardComponent
               key={index}
