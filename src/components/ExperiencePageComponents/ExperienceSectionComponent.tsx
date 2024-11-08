@@ -3,7 +3,7 @@ import animation from "../../assets/lottie/Animation2 - 1711175468407.json";
 import Lottie from "lottie-react";
 import GradiantText from "../Text/GradiantText";
 
-export default function PortfolioSectionComponent() {
+export default function ExperienceSectionComponent() {
   return (
     <section
       id="home"
@@ -28,16 +28,16 @@ export default function PortfolioSectionComponent() {
             className="xl:w-[500px]"
           >
             <h1 className="text-[70px] xl:text-[80px] font-black text-primary-color-light dark:text-primary-color-dark transition-colors duration-300">
-              <GradiantText childeren={"Portfolio."} />
+              <GradiantText childeren={"Experience."} />
             </h1>
             <h2 className="text-[25px] text-primary-text-light dark:text-primary-text-dark transition-colors duration-300">
-              Explore My Latest Projects
+              A Journey Through Code and Innovation
             </h2>
             <p className="text-[20px] text-primary-text-light dark:text-primary-text-dark mt-5 transition-colors duration-300">
-              I have extensive experience working in startups, tech companies,
-              and corporate environments. I have contributed to various
-              projects, including design systems, websites, applications, and
-              their ongoing maintenance.
+              From startups to corporations, I've tackled diverse projects,
+              honing my skills in frontend, backend, and database technologies.
+              Explore my journey and see how my expertise has evolved across
+              different roles.
             </p>
           </motion.div>
           <motion.div

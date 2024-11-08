@@ -9,6 +9,7 @@ import NavHeaderFooterSideBarLayout from "./components/Layout/NavHeaderFooterSid
 import ScrollToTop from "./utils/ScrollToTop";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
+import ExperiencePage from "./pages/ExperiencePage/ExperiencePage";
 
 function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -58,6 +59,14 @@ function App(): JSX.Element {
               element={
                 <NavHeaderFooterSideBarLayout>
                   <ContactPage />
+                </NavHeaderFooterSideBarLayout>
+              }
+            />
+            <Route
+              path="/Dastine-Jhay-Bernardo/experience"
+              element={
+                <NavHeaderFooterSideBarLayout>
+                  <ExperiencePage />
                 </NavHeaderFooterSideBarLayout>
               }
             />
