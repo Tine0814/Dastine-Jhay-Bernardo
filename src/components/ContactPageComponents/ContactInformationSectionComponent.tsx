@@ -1,5 +1,5 @@
 import { easeInOut, motion } from "framer-motion";
-import mirror from "../../assets/img/mirrorPic.png";
+import heroImg from "../../assets/img/corporateHlaf.png";
 import programming from "../../assets/img/python.jpg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { MdAttachEmail } from "react-icons/md";
@@ -91,13 +91,13 @@ export default function ContactInformationSectionComponent() {
             className="relative"
           >
             <img
-              src={mirror}
+              src={heroImg}
               alt="my image"
               className="w-[500px] filter-enhance relative z-[2] rounded-md transition-colors duration-300"
             />
             <img
               src={programming}
-              className="absolute bottom-0 z-[1] -right-40 rounded-md transition-colors duration-300"
+              className="absolute bottom-0 z-[1] -right-72 rounded-md transition-colors duration-300"
             />
           </motion.div>
         </motion.div>
