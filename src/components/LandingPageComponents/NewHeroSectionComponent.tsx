@@ -2,7 +2,7 @@ import { easeInOut, motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi";
 import GradiantText from "../Text/GradiantText";
 import { downloadFileAtURL, PDF_FILE_URL } from "./HeroSectionComponent";
-import heroImg from "../../assets/img/me.png";
+import heroImg from "../../assets/img/corporate.png";
 import ButtonComponent from "../Buttons/ButtonComponent";
 
 const NewHeroSectionComponent = () => {
@@ -68,7 +68,7 @@ const NewHeroSectionComponent = () => {
             <div className="absolute top-0 -left-4 w-44 h-44 sm:w-72 sm:h-72 bg-purple-300 dark:bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
             <div className="absolute top-0 -right-4 w-44 h-44 sm:w-72 sm:h-72 bg-yellow-300 dark:bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
             <div className="absolute -bottom-8 left-10 w-44 h-44 sm:w-72 sm:h-72 bg-pink-300 dark:bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
-            <div className="relative p-5 sm:p-10 z-10 backdrop-filter backdrop-blur-sm bg-white/30 dark:bg-gray-800/30 border border-gray-200 dark:border-gray-600 rounded-lg shadow-xl overflow-hidden aspect-square">
+            <div className="relative p-5 sm:p-10 z-10 backdrop-filter backdrop-blur-sm border border-gray-200 dark:border-gray-600 rounded-lg shadow-xl overflow-hidden aspect-square w-[600px]">
               <img src={heroImg} alt="Dastine Bernardo" />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 dark:from-blue-800/20 dark:via-purple-800/20 dark:to-pink-800/20 rounded-lg filter blur-2xl" />
