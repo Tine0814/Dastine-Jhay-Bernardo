@@ -4,6 +4,7 @@ import certificateOne from "../../assets/certificate/UC-7ae58f08-6d1d-4f2b-b847-
 import certificateTwo from "../../assets/certificate/UC-7ba5bf56-9347-4195-ad3d-658f7232587f.jpg";
 import certificateThree from "../../assets/certificate/UC-c9225180-2b55-4409-9fc1-0c13625ea66e.jpg";
 import certificateFour from "../../assets/certificate/UC-f3860ff7-5455-44a6-af87-e90147a9bf27.jpg";
+import nclex from "../../assets/certificate/nclex.jpg";
 import { DiCodeigniter, DiJqueryLogo, DiMsqlServer } from "react-icons/di";
 import { FaBootstrap, FaNodeJs, FaPhp } from "react-icons/fa";
 import {
@@ -21,6 +22,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import excelink from "../../assets/img/excelinkLogo.png";
 import safc from "../../assets/img/SAFC.png";
 import brandedTech from "../../assets/img/brandedtech.jpg";
+import nclexlogo from "../../assets/img/NCLEXYellowLogo.png";
 
 interface WorkExperience {
   startDate: string;
@@ -40,7 +42,7 @@ export default function JobAndCertificateSectionComponent() {
     {
       startDate: "APRIL 2024",
       endDate: "PRESENT",
-      title: "Application Developer Supervisor",
+      title: "Full-stack Developer",
       company: "SAFC",
       companyUrl: "#",
       description:
@@ -91,10 +93,10 @@ export default function JobAndCertificateSectionComponent() {
       startDate: "MARCH 2024",
       endDate: "JULY 2024",
       title: "Part-time Frontend Developer",
-      company: "20023 Branded Tech Inc. / Dreambig Inc.",
+      company: "Excelink",
       companyUrl: "#",
       description:
-        "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+        "Develop and maintain responsive, high-quality websites and web applications for a range of projects across industries, ensuring exceptional performance and user experiences. Collaborate with designers and backend developers to transform creative concepts into fully functional, pixel-perfect web interfaces. Utilize modern frontend technologies to build scalable, maintainable codebases while adhering to best practices in web development. Contribute to team success by sharing knowledge, troubleshooting technical challenges, and optimizing workflows to meet project goals efficiently.",
       technologies: [
         <div className="flex gap-2 items-center">
           <DiJqueryLogo />
@@ -109,20 +111,18 @@ export default function JobAndCertificateSectionComponent() {
           MySQL
         </div>,
         <div className="flex gap-2 items-center">
-          <DiCodeigniter />
-          Codeigniter
+          <FaReact />
+          React
         </div>,
         <div className="flex gap-2 items-center">
-          <LuFileJson2 />
-          AJAX
+          <SiMui />
+          MUI
         </div>,
+        <div className="flex gap-2 items-center">ZOD</div>,
+        <div className="flex gap-2 items-center">YUP</div>,
         <div className="flex gap-2 items-center">
-          <BsFiletypeXml />
-          XML
-        </div>,
-        <div className="flex gap-2 items-center">
-          <FaBootstrap />
-          Bootstrap
+          <SiTailwindcss />
+          Tailwind
         </div>,
       ],
       subRoles: ["Web Developer", "Developer"],
@@ -171,6 +171,9 @@ export default function JobAndCertificateSectionComponent() {
 
   const certificate = [
     {
+      img: nclex,
+    },
+    {
       img: certificateTwo,
     },
     {
@@ -195,6 +198,10 @@ export default function JobAndCertificateSectionComponent() {
     {
       name: "20023 Branded Tech",
       logo: brandedTech,
+    },
+    {
+      name: "NCLEX",
+      logo: nclexlogo,
     },
   ];
 
